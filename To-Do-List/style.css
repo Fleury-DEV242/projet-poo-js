@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  outline: none;
+  list-style: none;
+}
+body {
+  background-color: aliceblue;
+}
+#wrapper {
+  background: #fffefe;
+  width: 300px;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding-block: 5px;
+  padding-inline: 5px;
+  border: 1px solid rgb(210, 209, 209);
+  border-radius: 3px;
+}
+#wrapper #input-and-bouton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  padding-block: 2px;
+  padding-inline: 2px;
+}
+#wrapper #input-and-bouton input {
+  height: 35px;
+  font-size: 16px;
+  border: 1px solid rgb(210, 209, 209);
+  border-radius: 8px;
+}
+#wrapper #input-and-bouton input:focus {
+  box-shadow: 0px 0px 2px rgb(159, 159, 159);
+}
+#wrapper #input-and-bouton button {
+  color: #fffefe;
+  background-color: #2c8bff;
+  display: inline-block;
+  padding-inline: 9px;
+  padding-block: 7px;
+  border-radius: 8px;
+  border: 1px solid rgb(210, 209, 209);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+#wrapper #input-and-bouton button:hover {
+  background-color: #0054bb;
+}
+#wrapper #input-and-bouton button:active {
+  transform: scale(0.9);
+}
+#wrapper #liste {
+  background-color: #323232;
+  width: 260px;
+  height: auto;
+  margin: 20px auto;
+  border: 1px solid rgb(44, 44, 44);
+  border-radius: 8px;
+}
+#wrapper #liste ul{
+  background-color: #2c8bff;
+}
+#wrapper #liste li{
+  /* background-color: #ffffff; */
+}
