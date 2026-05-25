@@ -7,7 +7,7 @@
   list-style: none;
 }
 body {
-  background-color: aliceblue;
+  background-color: rgb(236, 233, 236);
 }
 #wrapper {
   background: #fffefe;
@@ -60,12 +60,30 @@ body {
   width: 260px;
   height: auto;
   margin: 20px auto;
+  padding-inline: 2px;
   border: 1px solid rgb(44, 44, 44);
   border-radius: 8px;
 }
 #wrapper #liste ul{
-  background-color: #2c8bff;
+  padding-left: 0;
 }
 #wrapper #liste li{
-  /* background-color: #ffffff; */
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 2px;
+  margin-top: 1px;
+  margin-bottom: 2px;
+  border-radius: 8px;
+}
+#wrapper #liste li button{
+   color: #ffffff;
+  background-color: #fc0000;
+  display: inline-block;
+  padding-inline: 9px;
+  padding-block: 7px;
+  border-radius: 8px;
+  border: 1px solid rgb(210, 209, 209);
+  cursor: pointer;
 }
