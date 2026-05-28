@@ -24,8 +24,8 @@ monPanier.ajouterProduit(new Produit("Air Jordan 4", 10000, "images/3.jpg"));
 monPanier.ajouterProduit(new Produit("Air Jordan 4", 10000, "images/1.jpg"));
 monPanier.ajouterProduit(new Produit("Air Jordan 4", 10000, "images/2.jpg"));
 monPanier.ajouterProduit(new Produit("Air Jordan 4", 10000, "images/3.jpg"));
-
-console.log(monPanier.mesProduits);
+monPanier.ajouterProduit(new Produit("Air Jordan 4", 10000, "images/1.jpg"));
+monPanier.ajouterProduit(new Produit("Air Jordan 4", 10000, "images/2.jpg"));
 
 function initialiserCatalogue(mesProduits) {
   mesProduits.forEach((produit) => {
@@ -47,6 +47,7 @@ function initialiserCatalogue(mesProduits) {
 
     const bouton = document.createElement("button");
     bouton.id = "ajouter-panier";
+    bouton.dataset.add = "ajouter";
     bouton.textContent = "Ajouter au panier";
 
     div.append(img);
@@ -60,3 +61,41 @@ function initialiserCatalogue(mesProduits) {
   });
 }
 initialiserCatalogue(monPanier.mesProduits);
+
+const ListeProduits = document.getElementById("produits");
+
+ListeProduits.addEventListener("click", (event) => {
+  const listePanier = document.getElementById("liste-panier");
+
+  if (event.target.dataset.add == "ajouter") {
+    const elementEnfant = event.target.parentNode.childNodes;
+
+    const [image, text] = elementEnfant;
+
+    const childNodesText = text.childNodes;
+    const [first, second] = childNodesText;
+    console.log(first.innerText);
+    console.log(second.innerText);
+ 
+    const li = document.createElement("li");
+
+    const img = document.createElement("img");
+    img.src = image.src;
+
+    const nom = document.createElement("p");
+    nom.textContent = first.innerText;
+
+    const prix = document.createElement("p");
+    nom.textContent = second.innerText;
+
+    li.append(img);
+    li.append(nom);
+    li.append(prix);
+    listePanier.append(li);
+  }
+
+  const nombre = document.getElementById("nombre");
+  console.log(nombre);
+  nombre.textContent = listePanier.childElementCount;
+  
+});

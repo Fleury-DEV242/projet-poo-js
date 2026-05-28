@@ -7,7 +7,7 @@
   list-style: none;
 }
 body {
-  background-color: #ffffff;
+  background-color: #2b2b2b;
 }
 #wrapper {
   background-color: #5b5a5a;
@@ -60,7 +60,6 @@ body {
   margin: 0px auto 0px auto;
   padding-top: 5px;
   padding-left: 15px;
-  /* padding-right: 2px; */
   overflow: auto;
 }
 #container #cote-droit h3 {
@@ -85,7 +84,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   margin: 0px auto 0px auto;
-  padding: 3px 5px;
+  padding-top: 15px;
   border: 1px solid #fdfdfd;
 }
 #container #statistique #nombres-produits {
@@ -134,4 +133,28 @@ p {
 }
 #container .produit button:hover{
   background-color: #0af426;
+}
+
+#cote-droit #liste-panier{
+  width: 100%;
+  height: 100%;
+  padding-right: 3px;
+  padding-left: 3px;
+  overflow: auto;
+}
+
+#cote-droit #liste-panier li{
+  background-color: #555555;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0px;
+}
+#liste-panier li img{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+#liste-panier li p{
+  color: #fdfdfd;
 }
